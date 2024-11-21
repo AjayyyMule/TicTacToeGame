@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Message and Button Container */
+.msg-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#msg {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    background-color: #dff9fb;
+    color: #2d3436;
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* New Game and Reset Buttons */
+#new-btn, #reset-btn {
+    background-color: #3498db;
+    color: white;
+    margin: 10px;
+    
+}
+
+#new-btn:hover, #reset-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Game Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Boxes */
+.box {
+    background-color: #ffffff;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    background-color: #dfe6e9;
+    border-color: #3498db;
+}
+
+.box:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 8px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
